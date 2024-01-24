@@ -8,7 +8,7 @@ COPY package-lock.json /usr/src/app/package-lock.json
 RUN npm ci --silent
 COPY . /usr/src/app
 
-RUN rm -v /usr/src/app/.env
+#RUN rm -v /usr/src/app/.env
 COPY .env.docker /usr/src/app/.env
 # ENV REACT_APP_API_URL undefined
 # ENV REACT_APP_API_ENDPOINT undefined
