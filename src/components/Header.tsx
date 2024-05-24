@@ -25,6 +25,12 @@ function Header() {
         paslauga
       </Button>
 
+      <Button component={NavLink} sx={{ lineHeight: 1 }} to='/demo-paslaugos/vue-nots'>
+        Vue (no TS) demo
+        <br />
+        paslauga
+      </Button>
+
       <UserCart />
 
       <UserProfile />
