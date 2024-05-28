@@ -33,7 +33,7 @@ function UserCart() {
         </Badge>
       </Button>
 
-      <Popper open={open} anchorEl={anchor}>
+      <Popper open={open} anchorEl={anchor} sx={{ zIndex: '1100' }}>
         <Card sx={{ px: 1.5, py: 1}}>
           <List>
             {cart?.map((item) => (
