@@ -8,8 +8,8 @@
     "url": "https://gitlab.cgidevlabs.com/RC-SES/self-service-portal-ui"
   },
   "scripts": {
-    "start": "webpack serve --port 9001",
-    "start:standalone": "webpack serve --env standalone",
+    "dev": "webpack serve --port 9001",
+    "dev:standalone": "webpack serve --env standalone",
     "build": "webpack --mode=production",
     "analyze": "webpack --mode=production --env analyze",
     "lint": "eslint src --ext js,ts,tsx",
