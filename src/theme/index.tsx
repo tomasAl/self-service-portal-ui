@@ -1,14 +1,7 @@
-// import '@fontsource/source-sans-pro/400.css';
-// import '@fontsource/source-sans-pro/600.css';
-// import '@fontsource/source-sans-pro/700.css';
-import { createTheme } from '@mui/material';
-import themePalette from './themePalette';
-import MuiButton from './MuiButton';
+import type {} from '@emotion/styled'
+import { createTheme } from '@mui/material'
+import { RcSesTheme } from '@registrucentras/rc-ses-react-components'
 
-const theme = createTheme(themePalette, {
-  components: {
-    MuiButton,
-  },
-});
+const theme = createTheme(RcSesTheme)
 
-export default theme;
+export default theme

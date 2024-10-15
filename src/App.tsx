@@ -1,3 +1,7 @@
+import type {} from '@emotion/styled'
+import type {} from '@mui/system'
+import type {} from '@mui/x-date-pickers/themeAugmentation'
+
 import React from 'react';
 import {
   Route,
@@ -6,7 +10,6 @@ import {
   createRoutesFromElements,
 } from 'react-router-dom';
 
-import HeaderLayout from './components/HeaderLayout';
 import Header from './components/Header';
 import { ThemeProvider } from '@emotion/react';
 import { CssBaseline } from '@mui/material';
@@ -17,9 +20,7 @@ import UserProvider from './contexts/UserContext';
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-      <Route path='*' element={<HeaderLayout />}>
-        <Route path='*' element={<Header />} />
-      </Route>
+      <Route path='*' element={<Header />} />
     </>
   ),
 );

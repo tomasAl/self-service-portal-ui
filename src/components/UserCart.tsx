@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import ShoppingBasketOutlinedIcon from '@mui/icons-material/ShoppingBasketOutlined';
 import { Avatar, Badge, Button, Card, List, ListItem, Popper, Typography } from "@mui/material";
 import { CartContext } from '../contexts/CartContext';
-import themePalette from '../theme/themePalette';
+import theme from '../theme';
 
 function UserCart() {
   const { itemCount, cart, clearCart } = useContext(CartContext);
@@ -38,7 +38,7 @@ function UserCart() {
           <List>
             {cart?.map((item) => (
               <ListItem key={item} disablePadding sx={{ mb: 2 }}>
-                <Avatar sx={{ bgcolor: themePalette.palette.primary.main, mr: 0.5, height: 24, width: 24 }}>{item[0]}</Avatar>
+                <Avatar sx={{ bgcolor: theme.palette.primary.main, mr: 0.5, height: 24, width: 24 }}>{item[0]}</Avatar>
                 <Typography>{item}</Typography>
               </ListItem>
             ))}
