@@ -2,6 +2,11 @@ declare module '@rc-ses/self-service-portal-ui-root' {
   import * as React from 'react'
 
   /*
+  * Funkcija, skirta nukreipti naudotoją į savitarnos krepšelio puslapį.
+  */
+  export const getToken: () => string;
+
+  /*
    * Funkcija, skirta nukreipti naudotoją į savitarnos krepšelio puslapį.
    */
   export const redirectToCart: () => void;
