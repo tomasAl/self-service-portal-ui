@@ -1,5 +1,5 @@
 import React from "react";
-import useLocalStorage from '../hooks/useLocalStorage';
+import useLocalStorage from '../shared/hooks/useLocalStorage';
 import { USER_LOCAL_STORAGE_KEY } from "../const/user";
 import { USER_MOCK } from "../const/user";
 import { User } from "../utils/user";

@@ -1,5 +1,5 @@
 import React, { createContext, useMemo } from "react";
-import useLocalStorage from '../hooks/useLocalStorage';
+import useLocalStorage from '../shared/hooks/useLocalStorage';
 import { CART_LOCAL_STORAGE_KEY } from '../const/cart';
 
 export const CartContext = createContext({

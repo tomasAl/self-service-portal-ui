@@ -10,7 +10,7 @@ function HeaderMidNav() {
   return (
     <Stack direction='row' columnGap={{ xs: 0, md: 1 }} sx={{ ml: 'auto' }}>
       <RcSesButton
-        onClick={() => redirectToSelfServiceDashboard()}
+        onClick={() => history.back()}
         size='large'
         startIcon={<CaretLeftIcon />}
         variant='link'

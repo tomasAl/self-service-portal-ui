@@ -1,6 +1,6 @@
 import React from 'react';
-import { Box, Container, styled } from '@mui/material'
-import { RcSesTheme } from '@registrucentras/rc-ses-react-components'
+import { AppBar, Container, styled } from '@mui/material'
+import { RcSesPalette, RcSesTheme } from '@registrucentras/rc-ses-react-components'
 
 import Logo from '../../assets/icons/components/Logo'
 import HeaderTopNav from './components/HeaderTopNav'
@@ -15,22 +15,35 @@ const StyledLogo = styled(Logo)({
 
 function Header() {
   return (
-    <Box
-      component='header'
-      sx={{
-        boxShadow:
-          '0px -6px 36px 0px #082D4429, 0px -4px 32px 0px #152D3C33, 0px 0px 8px 0px #10161F1A',
-        zIndex: 1,
-        position: 'relative',
-      }}
-    >
-      <HeaderTopNav />
+    <>
+      <AppBar
+        color='transparent'
+        position='static'
+        sx={{
+          backgroundColor: RcSesPalette.grey[100],
+          boxShadow: 'unset',
+          position: 'relative',
+          zIndex: 1101,
+        }}
+      >
+        <HeaderTopNav />
+      </AppBar>
 
-      <Container sx={{ py: 2, display: 'flex', alignItems: 'center' }}>
-        <StyledLogo />
-        <HeaderMidNav />
-      </Container>
-    </Box>
+      <AppBar
+        color='transparent'
+        position='sticky'
+        sx={{
+          backgroundColor: 'white',
+          boxShadow:
+            '0px -6px 36px 0px #082D4429, 0px -4px 32px 0px #152D3C33, 0px 0px 8px 0px #10161F1A',
+        }}
+      >
+        <Container sx={{ py: 2, display: 'flex', alignItems: 'center' }}>
+          <StyledLogo />
+          <HeaderMidNav />
+        </Container>
+      </AppBar>
+    </>
   )
 }
 
