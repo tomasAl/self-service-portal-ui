@@ -1,10 +1,13 @@
-declare module '@rc-ses/self-service-portal-ui-root' {
-  import * as React from 'react'
+declare module '@rc-ses/mfe-host' {
+  /*
+   * Funkcija, skirta nukreipti naudotoją į savitarnos krepšelio puslapį.
+   */
+  export const getToken: () => string;
 
   /*
-  * Funkcija, skirta nukreipti naudotoją į savitarnos krepšelio puslapį.
-  */
-  export const getToken: () => string;
+   * Funkcija, skirta gauti paslaugos router'io `basename`
+   */
+  export const getServiceFormBaseUrl: () => string;
 
   /*
    * Funkcija, skirta nukreipti naudotoją į savitarnos krepšelio puslapį.

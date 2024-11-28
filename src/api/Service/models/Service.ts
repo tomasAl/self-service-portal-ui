@@ -1,5 +1,6 @@
 type Service = {
   id: string
+  externalService: boolean
   forContractUsers: boolean
   forForeigners: boolean
   forLocals: boolean

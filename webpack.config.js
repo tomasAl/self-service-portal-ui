@@ -5,7 +5,7 @@ const singleSpaDefaults = require("webpack-config-single-spa-react-ts");
 module.exports = (webpackConfigEnv, argv) => {
   const defaultConfig = singleSpaDefaults({
     orgName: "rc-ses",
-    projectName: "self-service-portal-ui",
+    projectName: "mfe-navigation",
     webpackConfigEnv,
     argv,
   });

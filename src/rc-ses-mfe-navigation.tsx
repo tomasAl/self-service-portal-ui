@@ -16,5 +16,5 @@ const lifecycles = singleSpaReact({
 
 export const { bootstrap, mount, unmount } = lifecycles;
 
-export * from "./utils/cart";
-export * from "./utils/user";
+export * from "./utils/i18n";
+export * from "./utils/order";
