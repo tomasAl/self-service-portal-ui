@@ -3,6 +3,7 @@ import {  Collapse, Skeleton, Typography } from "@mui/material"
 import { RcSesServiceHeader } from '@registrucentras/rc-ses-react-components'
 import { useParams } from 'react-router-dom';
 import Service from '../api/Service/models/Service';
+import env from '../env';
 
 function ServiceHeader() {
   const { serviceId } = useParams()
@@ -55,20 +56,25 @@ function ServiceHeader() {
       <RcSesServiceHeader
         breadcrumbsProps={{
           path: [
-            { label: 'Savitarna', path: '/savitarna' },
-            { label: 'Paslaugų užsakymo forma', path: `/savitarna/paslaugos/uzsakymas/${service?.id}` },
+            { label: 'Savitarna', path: `${env.ENV_PUBLIC_PORTAL_URL}/savitarna` },
+            {
+              label: 'Paslaugų užsakymo forma',
+              path: `${env.ENV_SERVICE_PROVIDER_MFE_BASENAME}/${env.ENV_SERVICE_PROVIDER_SERVICE_PATH}/${service?.id}`,
+            },
           ],
         }}
         title={!!service ? service.title : <Skeleton variant='text' width='60%' />}
-      ><Typography variant='body1'>
-        {!!service && service?.serviceDescription}
-        {!service && (
-          <>
-            <Skeleton variant='text' width='90%' />
-            <Skeleton variant='text' width='90%' />
-            <Skeleton variant='text' width='80%' />
-          </>
-        )}</Typography>
+      >
+        <Typography variant='body1'>
+          {!!service && service?.serviceDescription}
+          {!service && (
+            <>
+              <Skeleton variant='text' width='90%' />
+              <Skeleton variant='text' width='90%' />
+              <Skeleton variant='text' width='80%' />
+            </>
+          )}
+        </Typography>
       </RcSesServiceHeader>
     </Collapse>
   )

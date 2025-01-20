@@ -12,15 +12,16 @@ import Header from './components/Header'
 import ServiceHeader from './components/ServiceHeader'
 import theme from './theme'
 import env from './env'
+import OwnedPropertiesHeader from './components/OwnedPropertiesHeader'
 
 const queryClient = new QueryClient()
 
 const router = createBrowserRouter(
   createRoutesFromElements(
     <>
-    <Route path={env.ENV_SERVICE_PROVIDER_FORM_PATH}>
+    <Route path={env.ENV_SERVICE_PROVIDER_MFE_BASENAME}>
       <Route
-        path=':serviceId?'
+        path={`${env.ENV_SERVICE_PROVIDER_SERVICE_PATH}/:serviceId?/*`}
         element={
           <>
             <Header />
@@ -28,14 +29,19 @@ const router = createBrowserRouter(
           </>
         }
       />
-    </Route>
-    <Route path='*'
+      <Route
+        path={`${env.ENV_SERVICE_PROVIDER_OWNED_PROPERTIES_PATH}/:serviceId?/*`}
         element={
           <>
             <Header />
-            <ServiceHeader />
+            <OwnedPropertiesHeader />
           </>
-        } />,
+        }
+      />
+    </Route>
+
+    <Route path='*'
+        element={<Header />} />,
     </>,
   ),
   {
