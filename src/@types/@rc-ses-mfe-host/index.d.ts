@@ -55,6 +55,14 @@ declare module '@rc-ses/mfe-host' {
   export const redirectToServiceDescriptionPage: (id: string) => void;
 
   /*
+   * Funkcija, skirta nukreipti naudotoją į paslaugos aprašymo puslapį su nurodytu klaidos pranešimu.
+   */
+  export const redirectToServiceDescriptionPageWithError: (
+    id: string,
+    type: 'notAuthorizedToProvideBeneficiaries' | 'unsupportedRole'
+  ) => void;
+
+  /*
    * Funkcija, skirta nukreipti naudotoją į paslaugos aprašymo puslapį su klaidos pranešimu.
    */
   export const unsupportedServiceRedirect: (id: string, message: string) => void;
